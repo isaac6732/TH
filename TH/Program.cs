@@ -14,7 +14,7 @@ namespace TH
             
             builder.Services.AddScoped<IDbConnection>((s) =>
             {
-                IDbConnection conn = new MySqlConnection(builder.Configuration.GetConnectionString("bestbuy"));
+                IDbConnection conn = new MySqlConnection(builder.Configuration.GetConnectionString("electronics"));
                 conn.Open();
                 return conn;
             });
