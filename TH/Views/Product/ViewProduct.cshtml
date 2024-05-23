@@ -2,37 +2,61 @@
 
 <h3>@Model.Name Information</h3>
 
-<table class="table">
-    <tr>
-        <th>Product ID</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Category ID</th>
-        <th>On Sale</th>
-        <th>StockLevel</th>
-        
-    </tr>
-    <tr>
-        <td>@Model.ProductID</td>
-        <td>@Model.Name</td>
-        <td>@Model.Price</td>
-        <td>@Model.CategoryID</td>
-        <td>@Model.OnSale</td>
-        <td>@Model.StockLevel</td>
-        
-    </tr>
-</table>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .table th, .table td {
+            vertical-align: middle;
+            text-align: center;
+        }
 
-<div style="display: block">
-    <a href="/Product/UpdateProduct/@Model.ProductID" class="btn btn-primary">Update this Product </a>
+        .btn-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
 
-</div>
+    <div class="container mt-4">
+        <h2 class="mb-4">Product Details</h2>
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Product ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category ID</th>
+                    <th>On Sale</th>
+                    <th>Stock Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.ProductID</td>
+                    <td>@Model.Name</td>
+                    <td>@Model.Price</td>
+                    <td>@Model.CategoryID</td>
+                    <td>@Model.OnSale ? "Yes" : "No"</td>
+                    <td>@Model.StockLevel</td>
+                </tr>
+            </tbody>
+        </table>
 
-<div style="display: block">
+        <div class="btn-container">
+            <a href="/Product/UpdateProduct/@Model.ProductID" class="btn btn-primary">Update this Product</a>
 
-    @using (Html.BeginForm("DeleteProduct", "Product", "Post"))
-    {
-        <input type="hidden" asp-for="ProductID" value="@Model.ProductID" />
-        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this product" class="btn btn-primary" />
-    }
-</div>
+            @using (Html.BeginForm("DeleteProduct", "Product", FormMethod.Post, new { @class = "d-inline" }))
+            {
+                <input type="hidden" asp-for="ProductID" value="@Model.ProductID" />
+                <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-danger ml-2">Delete this Product</button>
+            }
+        </div>
+    </div>
+</body>
+</html>
+

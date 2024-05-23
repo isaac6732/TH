@@ -1,33 +1,59 @@
 ﻿@model IEnumerable<Product>
 
 <h2>Products</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .table-img {
+            width: 50px;
+            height: auto;
+        }
 
-<div style="display: block">
-	<a href="/Product/InsertProduct/" class="btn btn-primary">Create a New Product</a>
-</div>
+        .table th, .table td {
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
 
-<table class="table">
-	<tr>
-		<th>ID</th>
-		<th>Name</th>
-		<th>Price</th>
-		<th>Category ID</th>
-		<th>On Sale</th>
-		<th>Stock Level</th>
-	</tr>
+    <div class="container mt-4">
+        <div class="d-flex justify-content-end mb-3">
+            <a href="/Product/InsertProduct/" class="btn btn-primary">Crear un Nuevo Producto</a>
+        </div>
 
-	@foreach (var product in @Model)
-	{
-		<tr>
-			<td><a href=/Product/ViewProduct/@product.ProductID>@product.ProductID</a></td>
-			<td>@product.Name</td>
-			<td>@product.Price</td>
-			<td>@product.CategoryID</td>
-			<td>@product.OnSale</td>
-			<td>@product.StockLevel</td>
-			
-		</tr>
-	}
-
-</table>
- 
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>ID Categoría</th>
+                    <th>En Oferta</th>
+                    <th>Nivel de Stock</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in @Model)
+                {
+                    <tr>
+                        <td><a href="/Product/ViewProduct/@product.ProductID">@product.ProductID</a></td>
+                        <td>@product.Name</td>
+                        <td>@product.Price</td>
+                        <td>@product.CategoryID</td>
+                        <td>@product.OnSale ? "Sí" : "No"</td>
+                        <td>@product.StockLevel</td>
+                        <td><img src="@product.ImagePath" class="table-img"></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
