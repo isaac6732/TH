@@ -1,113 +1,98 @@
 ﻿<!DOCTYPE html>
-
-<body>
-	<div class="image-container">
-		<img src="~/iforp/toyota_supra_163.jpg" alt="Toyota Supra">
-	</div>
-
-</body>
-
-<body>
-	<div class="contenedor">
-		<h2>Cart on Special Offer</h2>
-	</div>
-</body>
-
-<body>
-	<div class="contenedor-principal">
-		<div class="contenedor-pequeno">
-			<img src="~/iforp/image.jpg" class="card-img-top" alt="..." />
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<p class="precio">$199.99</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		</div>
-		<div class="contenedor-pequeno">
-			<img src="~/iforp/apvytoyota-hybride-prix-neuf2425a17d83b0d54116a24386f0ab9da1-scaled.jpg" class="card-img-top" alt="..." />
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<p class="precio">$299.99</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		</div>
-		<div class="contenedor-pequeno">
-			<img src="~/iforp/toyota-yaris-ativ-1._bm.jpg" class="card-img-top" alt="..." />
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<p class="precio">$399.99</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		</div>
-		<div class="contenedor-pequeno">
-			<img src="~/iforp/toyota-pakistan-to-launch-assembled-hybrid-electric-vehicle-suv-corolla-cross-by-2023-1068x601.jpg" class="card-img-top" alt="..." />
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<p class="precio">$499.99</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		</div>
-	</div>
-</body>
-
-<body>
-	<div class="contenedor">
-		<h2>Este es mi contenedor</h2>
-	</div>
-</body>
-
-<body>
-	<div class="image-container">
-		<img src="~/iforp/toyota-s-electric-car-what-we-know-so-far-113351_1.jpg" />
-	</div>
-</body>
-
-<div class="container" style="max-width: 1250px; margin-right: 0; direction: rtl; margin-top:40px;">
-	<div class="row g-0">
-
-		<div class="col-md-5">
-			<img src="~/iforp/5.png" class="img-fluid rounded-start" alt="..." />
-		</div>
-
-		<div class="col-md-7">
-			<div class="card-body">
-				<h5 class="card-title">Toyota Rav4</h5>
-				<p class="card-text">RAV4 Prime boasts an impressive 302 net combined horsepower, and its 5.7-second 0-60 time * means that this SUV is quick, too. The advanced plug-in hybrid powertrain provides the response you crave, giving you the power you want, when you want it.</p>
-
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-<div class="container1" style="max-width: 1500px; margin-top:25px;margin-left: 0;">
-	<div class="row g-0">
-		<div class="col-md-4">
-			<img src="~/iforp/phv3015_21.tif-x-large-jpg.jpeg" class="img-fluid rounded-start" alt="..." />
-		</div>
-		<div class="col-md-8">
-			<div class="card-body">
-				<h5 class="card-title">Toyota SA</h5>
-				<p class="card-text">The SA was Toyota's first true post war design. It differed from all previous Toyota cars by having a 4-cylinder engine (previously a 6-cylinder was used), 4-wheel independent suspension (previously using rigid axles with leaf springs) and a smaller, "ponton" influenced aerodynamic body.</p>
-
-			</div>
-		</div>
-	</div>
-</div>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Footer Example</title>
+	<title>Interactive HTML Example</title>
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	
 </head>
+
 <body>
+	<div class="image-container">
+		<img src="~/iforp/toyota_supra_163.jpg" alt="Toyota Supra" onclick="showImageDetails('Toyota Supra', 'A detailed description of the Toyota Supra.')">
+	</div>
+
+	<div class="contenedor">
+		<h2>Cart on Special Offer</h2>
+	</div>
+
+	<div class="contenedor-principal">
+		<div class="contenedor-pequeno">
+			<img src="~/iforp/image.jpg" class="card-img-top" alt="..." onclick="showImageDetails('Item 1', 'A detailed description of Item 1.')">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<p class="precio">$199.99</p>
+				<button class="btn btn-primary" onclick="alert('Going to Item 1')">Go somewhere</button>
+			</div>
+		</div>
+		<div class="contenedor-pequeno">
+			<img src="~/iforp/apvytoyota-hybride-prix-neuf2425a17d83b0d54116a24386f0ab9da1-scaled.jpg" class="card-img-top" alt="..." onclick="showImageDetails('Item 2', 'A detailed description of Item 2.')">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<p class="precio">$299.99</p>
+				<button class="btn btn-primary" onclick="alert('Going to Item 2')">Go somewhere</button>
+			</div>
+		</div>
+		<div class="contenedor-pequeno">
+			<img src="~/iforp/toyota-yaris-ativ-1._bm.jpg" class="card-img-top" alt="..." onclick="showImageDetails('Item 3', 'A detailed description of Item 3.')">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<p class="precio">$399.99</p>
+				<button class="btn btn-primary" onclick="alert('Going to Item 3')">Go somewhere</button>
+			</div>
+		</div>
+		<div class="contenedor-pequeno">
+			<img src="~/iforp/toyota-pakistan-to-launch-assembled-hybrid-electric-vehicle-suv-corolla-cross-by-2023-1068x601.jpg" class="card-img-top" alt="..." onclick="showImageDetails('Item 4', 'A detailed description of Item 4.')">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<p class="precio">$499.99</p>
+				<button class="btn btn-primary" onclick="alert('Going to Item 4')">Go somewhere</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="contenedor">
+		<h2>Este es mi contenedor</h2>
+	</div>
+
+	<div class="image-container">
+		<img src="~/iforp/toyota-s-electric-car-what-we-know-so-far-113351_1.jpg" alt="Toyota Electric Car" onclick="showImageDetails('Toyota Electric Car', 'A detailed description of the Toyota Electric Car.')">
+	</div>
+
+	<div class="container" style="max-width: 1250px; margin-right: 0; direction: rtl; margin-top:40px;">
+		<div class="row g-0">
+			<div class="col-md-5">
+				<img src="~/iforp/5.png" class="img-fluid rounded-start" alt="..." onclick="showImageDetails('Toyota Rav4', 'A detailed description of the Toyota Rav4.')">
+			</div>
+			<div class="col-md-7">
+				<div class="card-body">
+					<h5 class="card-title">Toyota Rav4</h5>
+					<p class="card-text">RAV4 Prime boasts an impressive 302 net combined horsepower, and its 5.7-second 0-60 time * means that this SUV is quick, too. The advanced plug-in hybrid powertrain provides the response you crave, giving you the power you want, when you want it.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container1" style="max-width: 1500px; margin-top:25px; margin-left: 0;">
+		<div class="row g-0">
+			<div class="col-md-4">
+				<img src="~/iforp/phv3015_21.tif-x-large-jpg.jpeg" class="img-fluid rounded-start" alt="..." onclick="showImageDetails('Toyota SA', 'A detailed description of the Toyota SA.')">
+			</div>
+			<div class="col-md-8">
+				<div class="card-body">
+					<h5 class="card-title">Toyota SA</h5>
+					<p class="card-text">The SA was Toyota's first true post-war design. It differed from all previous Toyota cars by having a 4-cylinder engine (previously a 6-cylinder was used), 4-wheel independent suspension (previously using rigid axles with leaf springs) and a smaller, "ponton" influenced aerodynamic body.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<footer>
 		<div class="container">
@@ -141,8 +126,15 @@
 			</div>
 		</div>
 	</footer>
+
+	<script>
+		function showImageDetails(title, description) {
+			alert(title + "\n\n" + description);
+		}
+	</script>
 </body>
 
+</html>
 
 <style>
 
@@ -314,6 +306,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.image-container img,
+	.contenedor-pequeno img {
+		cursor: pointer;
 	}
 
 </style>
